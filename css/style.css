@@ -11,51 +11,21 @@
     --border-color: #e1e1e1;
     --font-primary: "Helvetica Neue", Helvetica, Arial, sans-serif;
     --font-secondary: Georgia, "Times New Roman", Times, serif;
-    
 }
 
 /* ==========================================================================
-   Reset and Foundation
+   Global Reset
    ========================================================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 body {
     font-family: var(--font-primary);
     color: var(--text-main);
     background-color: var(--bg-white);
-    line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-}
-
-a {
-    text-decoration: none;
-    color: inherit;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
 }
 
 /* ==========================================================================
    Utilities for Accessibility (WAVE)
    ========================================================================== */
-.visually-hidden {
-    position: absolute;
-    width: 1px;
-    height: 1px;
-    padding: 0;
-    margin: -1px;
-    overflow: hidden;
-    clip: rect(0, 0, 0, 0);
-    border: 0;
-}
-
 a:focus-visible, 
 button:focus-visible, 
 input:focus-visible {
@@ -64,593 +34,245 @@ input:focus-visible {
 }
 
 /* ==========================================================================
-   General Container Utility
+   Typography and Shared Layouts
    ========================================================================== */
-.container {
-    width: 100%;
-    max-width: min(1200px, 75vw);  /* Grows with viewport, caps at 1200px */
-    margin: 0 auto;
-    padding: 0 20px;
+a.text-dark:hover {
+    color: var(--brand-color) !important;
 }
 
-.icon {
-    font-style: normal;
+.text-primary {
+    color: var(--brand-color) !important;
 }
 
-/* ==========================================================================
-   HEADER - DESKTOP MODE (1200px and up)
-   ========================================================================== */
-.site-header {
-    background-color: var(--bg-white);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.top-row {
-    background-color: var(--bg-white);
-    border-bottom: 1px solid var(--border-color);
-}
-
-.top-row-inner {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 0;
-    height: auto;
-    min-height: 35px;
-}
-
-.top-row-left {
-    display: flex;
-    align-items: center;
-}
-
-.qn-logo {
-    font-weight: 900;
-    font-size: 13px;
-    color: #999999;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-}
-
-.top-row-right {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-.top-icon-link {
-    color: var(--text-main);
-    font-size: 20px;
+/* Offcanvas custom adjustment */
+.offcanvas-body .dropdown-menu {
     position: relative;
-    text-decoration: none;
+    max-height: 50vh;
+    overflow-y: auto;
 }
 
-.bell-counter {
-    position: absolute;
-    top: -8px;
-    right: -10px;
+@media (min-width: 768px) {
+    .offcanvas-body .dropdown-menu {
+        position: absolute;
+        max-height: none;
+        overflow-y: visible;
+        width: 100%;
+        left: 0;
+        right: 0;
+    }
+}
+
+/* ==========================================================================
+   News Layout Components
+   ========================================================================== */
+
+/* Brand Color Helpers */
+.text-brand-primary {
+    color: var(--brand-color) !important;
+}
+
+.text-brand-red {
+    color: var(--brand-red) !important;
+}
+
+/* Red Pulsing Dot for "Ultim'ora" */
+.pulse-dot {
+    height: 12px;
+    width: 12px;
     background-color: var(--brand-red);
-    color: white;
-    font-size: 10px;
-    font-weight: bold;
-    padding: 2px 5px;
     border-radius: 50%;
-    min-width: 18px;
-    text-align: center;
+    display: inline-block;
 }
 
-.login-link {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    font-weight: bold;
-    color: var(--text-main);
-    font-size: 14px;
-    padding: 6px 12px;
-    border: 1px solid var(--border-color);
-    border-radius: 20px;
+/* Typography Tweaks */
+.headline {
+    font-family: var(--font-primary);
+    letter-spacing: -0.02em; /* Gives that tight newspaper headline feel */
+    line-height: 1.15;
 }
 
-.login-link:hover {
-    background-color: var(--bg-light);
+.category-label {
+    font-size: 0.75rem;
+    letter-spacing: 0.05em;
 }
 
-/* ==========================================================================
-   LOGO & MANCHETTES ROW - DESKTOP MODE
-   ========================================================================== */
-.logo-row {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 0;
-    gap: 20px;
-    background: #fff;
+.author {
+    font-size: 0.75rem;
 }
 
-.manchette {
-    background: #f4f6f8;
-    display: flex;
-    align-items: flex-start;   /* Align content to the top */
-    gap: 12px;
-    text-decoration: none;
-    flex: 0 0 180px;
-    height: 100px;             /* Set a fixed height for the manchette box */
-    padding: 18px 14px;
+.article-excerpt {
+    /* Often newspaper excerpts use a serif font or a lighter sans-serif. 
+       We are using the secondary font variable you provided. */
+    font-family: var(--font-secondary); 
+    font-size: 0.95rem;
+    line-height: 1.4;
 }
 
-.manchette-left {
-    justify-content: flex-start;
-}
-
-.manchette-right {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.profile-img {
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    object-fit: cover;
-    display: block;
-}
-
-.manchette-text {
-    line-height: 1.3;
-}
-
-.manchette-title {
-    display: block;
-    font-weight: bold;
-    font-size: 13px;
-    color: var(--brand-color);
-    margin-bottom: 2px;
-}
-
-.manchette-content {
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
-    color: var(--brand-color);
-}
-
-.manchette-title-white {
-    display: block;
-    font-weight: bold;
-    font-size: 13px;
-    color: var(--text-main);
-    margin-bottom: 2px;
-}
-
-.manchette-content-blue {
-    display: block;
-    font-size: 12px;
-    font-weight: bold;
-    color: var(--brand-color);
-}
-
-.main-logo-svg {
-    height: 60px;
-    width: auto;
-    max-width: 100%;
-}
-
-.edicola-img {
-    width: 50px;
-    height: 70px;
-    object-fit: cover;
-    flex-shrink: 0;
-    display: block;
-}
-
-.main-logo-link {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-}
-
-.main-logo-img {
-    height: 50px;
-    width: auto;
-}
-
-/* ==========================================================================
-   NAVIGATION WRAPPER
-   ========================================================================== */
-.nav-wrapper {
-    background-color: var(--bg-light);
-}
-
-/* ==========================================================================
-   TRENDING TOPICS ROW - DESKTOP MODE
-   ========================================================================== */
-.trending-topics {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 15px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-.trending-topics a {
-    color: var(--brand-color);
-    font-weight: bold;
-    font-size: 13px;
-}
-
-.trending-topics a:hover {
+/* Hover effects for articles */
+.article-link:hover .headline {
+    color: var(--brand-color) !important;
     text-decoration: underline;
 }
 
-/* ==========================================================================
-   MAIN NAVIGATION BAR - DESKTOP MODE
-   ========================================================================== */
-.main-nav {
-    position: relative; /* Make nav relative so menu can be absolute to full width */
+/* Image utility to prevent stretching */
+.object-fit-cover {
+    object-fit: cover;
+} 
+
+/* Slider Section Styling */
+.bg-section-alt {
+    background-color: #e9f2fb; /* A light blue to match the image_f09c9f.png screenshot */
+    padding: 40px 0;
 }
 
-.nav-list {
-    display: flex;
-    list-style: none;
-    justify-content: space-between;
+.slider-controls .btn-outline-primary {
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    display: inline-flex;
     align-items: center;
-    margin: 0;
+    justify-content: center;
     padding: 0;
-    width: 100%;
+    border-color: var(--brand-color);
+    color: var(--brand-color);
 }
 
-.nav-list > li {
-    border-right: 1px solid var(--border-color);  /* Separator */
-    flex: 1;
-    text-align: center;
+.small-article-img {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    flex-shrink: 0; 
 }
 
-.nav-list > li:last-child {
-    border-right: none;  /* No separator on last item */
+.article-title-small {
+    font-size: 0.9rem;
+    line-height: 1.2;
+    margin-bottom: 0;
 }
 
+/* Vertical divider on large screens only */
+@media (min-width: 992px) {
+    .border-end-lg {
+        border-right: 1px solid rgba(0,0,0,0.1);
+        padding-right: 2rem;
+    }
+}
 
-.nav-list > li > a {
+/* Ensure the carousel has a smooth transition */
+.carousel-item {
+    transition: transform 0.5s ease-in-out;
+}
+
+/* Forces the carousel items to respect the height of the parent row */
+#rightColumnCarousel .carousel-inner,
+#rightColumnCarousel .carousel-item {
+    height: 100%;
+}
+
+/* Optional: Add a subtle border or hover background to the small articles 
+   to make the "filling" of space more intentional */
+.article-link {
+    padding: 5px 0;
+    transition: background-color 0.2s ease;
+}
+
+/* Ensure the small images don't get squashed as they fill the space */
+.small-article-img {
+    aspect-ratio: 1 / 1;
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Video Carousel Styling */
+.video-card {
+    position: relative;
+    border-radius: 8px;
+    overflow: hidden;
+    aspect-ratio: 9 / 16; /* Portrait vertical format */
+}
+
+.video-card img {
+    height: 100%;
+    object-fit: cover;
+}
+
+.video-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    color: white;
+}
+
+.video-title {
+    font-size: 0.85rem;
+    font-weight: bold;
+    margin-bottom: 2px;
+}
+
+.video-date {
+    font-size: 0.7rem;
+    opacity: 0.8;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(255,255,255,0.3);
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 18px;
-    font-weight: bold;
-    font-size: 11px;
-    color: var(--text-main);
-    text-transform: uppercase;
-    width: 100%;
+    color: white;
 }
 
-.nav-list > li > a span {
-    font-size: 9px;
-    color: #999;
+/* Sidebar Styling */
+.sidebar {
+    border-left: 1px solid var(--border-color);
+    padding-left: 20px;
 }
 
-.nav-list > li > a:hover {
-    color: var(--brand-color);
-}
-
-.red-dot {
-    display: inline-block;
-    width: 6px;
-    height: 6px;
-    background-color: var(--brand-red);
-    border-radius: 50%;
-    margin-left: 6px;
-}
-
-.nav-search-item {
-    margin-left: 0;  /* Remove auto margin */
-    padding-left: 0;
-    border-left: none;
-}
-
-.search-btn {
-    color: var(--text-main) !important;
-}
-
-/* Dropdown styling - MENU update */
-.dropdown-menu {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;           /* Span full width */
-    background-color: var(--bg-white);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    z-index: 100;
-    border: 1px solid var(--border-color);
-    padding: 20px 40px;
-}
-
-/* Show exactly when hover */
-.dropdown:hover .dropdown-menu,
-.dropdown:focus-within .dropdown-menu {
-    display: block;
-}
-
-/* Menu internal layout */
-.menu {
-    max-width: min(1200px, 75vw); /* Match your main .container max-width */
-    margin: 0 auto;
-}
-
-/* Search bar styling inside dropdown */
-.dropdown-search {
-    background-color: #f8f9fa; /* Very light gray */
-    padding: 12px 20px;
-    border-radius: 6px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 30px;
-}
-
-.dropdown-search .icon {
-    color: var(--text-muted);
-}
-
-.dropdown-search input {
-    border: none;
-    background: transparent;
-    font-size: 15px;
-    color: var(--text-main);
-    width: 100%;
-    outline: none;
-}
-
-.dropdown-search input::placeholder {
-    color: #8fa0b5; /* Specific placeholder blue-gray */
-}
-
-/* Multi-column list styling */
-.menu-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    column-gap: 30px;
-    row-gap: 20px;
-}
-
-.menu-list li a {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    font-size: 14px;
-    color: #032b5e; /* Darker blue for links */
-    font-weight: bold;
-    text-decoration: none;
-    padding: 2px 0;
-}
-
-.menu-list li a span {
-    color: #999;
-    font-size: 16px;
-    line-height: 1;
-}
-
-.menu-list li a:hover {
-    color: var(--brand-color);
-}
-
-/* Modify specific list to have 2 columns instead of 4 */
-.menu-list.cols-2 {
-    grid-template-columns: repeat(2, 1fr);
-}
-
-/* Layout for split menus (Links + Articles) */
-.menu-split-layout {
-    display: flex;
-    gap: 40px;
-}
-
-/* Make the list take half the space, and add a vertical separator line */
-.menu-split-layout .menu-list {
-    flex: 1;
-    border-right: 1px solid var(--border-color);
-    padding-right: 40px;
-}
-
-/* Layout for the articles container */
-.menu-articles {
-    flex: 1;
-    display: flex;
-    gap: 20px;
-    padding-top: 10px; /* Aligns visually with the grid text */
-}
-
-/* Individual article card styling */
-.dropdown-article-card {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    text-decoration: none;
-}
-
-.dropdown-article-card img {
-    width: 100%;
-    aspect-ratio: 16 / 9;
-    object-fit: cover;
-    margin-bottom: 10px;
-}
-
-.dropdown-article-card .article-label {
-    font-size: 11px;
-    color: var(--text-muted);
-    text-transform: uppercase;
-    margin-bottom: 5px;
-}
-
-.dropdown-article-card .article-title {
-    font-size: 14px;
-    font-weight: bold;
-    color: var(--text-main);
-    line-height: 1.3;
-}
-
-.dropdown-article-card:hover .article-title {
-    color: var(--brand-color);
-}
-
-/* ==========================================================================
-   TABLET/COMPACT MODE (768px to 1199px)
-   ========================================================================== */
-@media (max-width: 1199px) {
-    :root {
-        --header-max-width-desktop: 100%;
-    }
-
-    .manchette {
-        display: none;
-    }
-
-    .logo-row {
-        justify-content: center;
-        padding: 15px 0;
-    }
-
-    .trending-topics {
-        gap: 12px;
-        padding: 12px 0;
-    }
-
-    .trending-topics a {
-        font-size: 12px;
-    }
-
-    .nav-list > li > a {
-        padding: 12px 14px;
-        font-size: 12px;
-    }
-
-    .nav-search-item {
-        padding-left: 12px;
-    }
-}
-
-/* ==========================================================================
-   MOBILE MODE (Below 768px)
-   ========================================================================== */
-@media (max-width: 767px) {
-    .top-row-inner {
-        min-height: 40px;
-    }
-
-    .qn-logo {
-        font-size: 12px;
-    }
-
-    .top-row-right {
-        gap: 12px;
-    }
-
-    .top-icon-link {
-        font-size: 18px;
-    }
-
-    .login-link {
-        display: none;
-    }
-
-    .logo-row {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 12px 0;
-        gap: 10px;
-    }
-
-    .main-logo-img {
-        height: 40px;
-    }
-
-    .trending-topics {
-        display: none;
-    }
-
-    .main-nav {
-        background-color: var(--bg-white);
-    }
-
-    .mobile-toggle {
-        display: block;
-    }
-
-    .hamburger-icon {
-        display: flex;
-        flex-direction: column;
-        gap: 4px;
-        cursor: pointer;
-        padding: 8px;
-    }
-
-    .hamburger-icon span {
-        display: block;
-        width: 24px;
-        height: 3px;
-        background-color: var(--text-main);
-        transition: 0.3s;
-    }
-
-    .mobile-menu-checkbox:checked + .hamburger-icon span:nth-child(1) {
-        transform: rotate(45deg) translate(8px, 8px);
-    }
-
-    .mobile-menu-checkbox:checked + .hamburger-icon span:nth-child(2) {
-        opacity: 0;
-    }
-
-    .mobile-menu-checkbox:checked + .hamburger-icon span:nth-child(3) {
-        transform: rotate(-45deg) translate(7px, -7px);
-    }
-
-    .nav-list {
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        align-items: stretch;
-    }
-
-    .nav-list > li {
-        width: 100%;
-        border-bottom: 1px solid var(--border-color);
-    }
-
-    .nav-list > li > a {
-        padding: 13px 15px;
-    }
-
-    .nav-search-item {
-        margin-left: 0;
-        padding-left: 0;
+@media (max-width: 991px) {
+    .sidebar {
         border-left: none;
-    }
-
-    .site-header:has(.mobile-menu-checkbox:checked) .nav-list {
-        display: flex;
-    }
-
-    .dropdown-menu {
-        position: static;
-        box-shadow: none;
-        background-color: var(--bg-light);
-        display: none;
-        border: none;
-    }
-
-    .dropdown:focus-within .dropdown-menu {
-        display: block;
+        border-top: 1px solid var(--border-color);
+        padding-left: 0;
+        padding-top: 30px;
+        margin-top: 30px;
     }
 }
 
-/* ==========================================================================
-   Additional Utilities
-   ========================================================================== */
-.mobile-toggle {
-    display: none;
+/* Slider Container */
+.video-slider-viewport {
+    overflow: hidden; /* This hides the videos that are "off-screen" */
+    position: relative;
+    padding: 10px;
+}
+
+.video-slider-track {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping shown in your image */
+    transition: transform 0.4s ease-in-out; /* Smooth slide effect */
+    gap: 10px; /* Space between videos */
+}
+
+/* Force each slide to take up exactly 1/4th of the container width minus gaps */
+.video-slide-item {
+    flex: 0 0 calc(25% - 8px); 
+    min-width: calc(25% - 8px);
+}
+
+/* Tablet / Mobile adjustment: Show 2 videos instead of 4 */
+@media (max-width: 768px) {
+    .video-slide-item {
+        flex: 0 0 calc(50% - 5px);
+        min-width: calc(50% - 5px);
+    }
 }
