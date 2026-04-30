@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutte le ultime notizie in tempo reale dall'Emilia Romagna e dalle Marche</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header class="site-header">
+        <!-- Top Row: Utilities & Login -->
+        <div class="top-row">
+            <div class="container top-row-inner">
+                <div class="top-row-left">
+                    <a href="#" class="qn-logo" aria-label="Quotidiano Nazionale">QUOTIDIANO NAZIONALE</a>
+                </div>
+                <div class="top-row-right">
+                    <a href="#" class="top-icon-link" aria-label="Acquista il giornale">
+                        <span class="icon newspaper-icon">📰</span>
+                    </a>
+                    <a href="#" class="top-icon-link bell-link" aria-label="Notifiche">
+                        <span class="icon bell-icon">🔔</span>
+                        <span class="bell-counter">2</span>
+                    </a>
+                    <a href="#" class="login-link">
+                        <span class="icon user-icon">👤</span>
+                        <span>Accedi</span>
+                    </a>
+                    <!-- Checkbox Hack for Mobile Menu -->
+                    <div class="mobile-toggle">
+                        <input type="checkbox" id="mobile-menu-toggle" class="mobile-menu-checkbox visually-hidden" aria-label="Toggle mobile menu">
+                        <label for="mobile-menu-toggle" class="hamburger-icon" aria-hidden="true">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Logo Row: Marchettes & Main Logo -->
+        <div class="logo-row container">
+            <!-- Left Manchette -->
+            <a href="#" class="manchette manchette-left">
+                <div class="manchette-text">
+                    <span class="manchette-title">Dal cielo alla<br>terra</span>
+                    <span></span>
+                    <span class="manchette-content">Matteo Naccari</span>
+                </div>
+                <!-- Make it circular with a specific placeholder -->
+                <img src="https://placehold.co/50x50/e1e1e1/333333?text=Profile" alt="Matteo Naccari" class="profile-img" width="50" height="50">
+            </a>
+
+            <!-- Main Logo -->
+            <a href="#" class="main-logo-link" aria-label="Homepage">
+                <svg class="main-logo-svg" viewBox="0 0 800 100" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <text x="50%" y="65" font-size="72" font-weight="bold" fill="#0066cc" text-anchor="middle" font-family="Arial, sans-serif">
+                        il Resto del Carlino
+                    </text>
+                </svg>
+            </a>
+
+            <!-- Right Manchette -->
+            <a href="#" class="manchette manchette-right">
+                <div class="manchette-text">
+                    <span class="manchette-title-white">Abbonamento<br>digitale</span>
+                    <span class="manchette-content-blue">1 mese a 6 €</span>
+                </div>
+                <img src="https://placehold.co/50x60/e1e1e1/333333?text=Edicola" alt="Abbonamento digitale" class="edicola-img" width="50" height="60">
+            </a>
+        </div>
+
+        <!-- Navigation Wrapper (Grey Box) -->
+        <div class="nav-wrapper container">
+            
+            <!-- Trending Topics Row -->
+            <div class="trending-topics">
+                <a href="#">Truffa fotovoltaico</a>
+                <a href="#">Pazienti sfigurate</a>
+                <a href="#">Ripara buca</a>
+                <a href="#">Incidenti in A14</a>
+                <a href="#">Vasco Rossi scaletta</a>
+                <a href="#">Bistecche più buone</a>
+            </div>
+
+            <!-- Main Navigation Bar -->
+            <nav class="main-nav" aria-label="Main Navigation">
+                <ul class="nav-list">
+                                        <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">CITTÀ <span>∨</span></a>
+                        <!-- Full-width "Mega" Dropdown -->
+                        <div class="dropdown-menu menu" aria-label="Sottomenu Città">
+                            
+                            <!-- Search Bar inside dropdown -->
+                            <div class="dropdown-search">
+                                <span class="icon">🔍</span>
+                                <input type="text" placeholder="Ricerca" aria-label="Cerca">
+                            </div>
+
+                            <!-- Multi-column city list -->
+                            <ul class="menu-list">
+                                <li><a href="#">Bologna <span>›</span></a></li>
+                                <li><a href="#">Civitanova Marche <span>›</span></a></li>
+                                <li><a href="#">Ferrara <span>›</span></a></li>
+                                <li><a href="#">Modena <span>›</span></a></li>
+                                <li><a href="#">Reggio Emilia <span>›</span></a></li>
+                                <li><a href="#">Firenze <span>›</span></a></li>
+                                <li><a href="#">La Spezia <span>›</span></a></li>
+                                <li><a href="#">Pisa <span>›</span></a></li>
+                                <li><a href="#">Sarzana <span>›</span></a></li>
+                                <li><a href="#">Milano <span>›</span></a></li>
+                                <li><a href="#">Lecco <span>›</span></a></li>
+                                <li><a href="#">Monza Brianza <span>›</span></a></li>
+                                <li><a href="#">Roma <span>›</span></a></li>
+                                
+                                <li><a href="#">Ancona <span>›</span></a></li>
+                                <li><a href="#">Emilia Romagna <span>›</span></a></li>
+                                <li><a href="#">Forlì <span>›</span></a></li>
+                                <li><a href="#">Marche <span>›</span></a></li>
+                                <li><a href="#">Rimini <span>›</span></a></li>
+                                <li><a href="#">Arezzo <span>›</span></a></li>
+                                <li><a href="#">Lucca <span>›</span></a></li>
+                                <li><a href="#">Pistoia <span>›</span></a></li>
+                                <li><a href="#">Siena <span>›</span></a></li>
+                                <li><a href="#">Bergamo <span>›</span></a></li>
+                                <li><a href="#">Lodi <span>›</span></a></li>
+                                <li><a href="#">Pavia <span>›</span></a></li>
+                                <li><a href="#">Napoli <span>›</span></a></li>
+
+                                <li><a href="#">Ascoli <span>›</span></a></li>
+                                <li><a href="#">Fano <span>›</span></a></li>
+                                <li><a href="#">Imola <span>›</span></a></li>
+                                <li><a href="#">Pesaro <span>›</span></a></li>
+                                <li><a href="#">Rovigo <span>›</span></a></li>
+                                <li><a href="#">Empoli <span>›</span></a></li>
+                                <li><a href="#">Massa Carrara <span>›</span></a></li>
+                                <li><a href="#">Pontedera <span>›</span></a></li>
+                                <li><a href="#">Umbria <span>›</span></a></li>
+                                <li><a href="#">Como <span>›</span></a></li>
+                                <li><a href="#">Legnano <span>›</span></a></li>
+                                <li><a href="#">Sondrio <span>›</span></a></li>
+
+                                <li><a href="#">Cesena <span>›</span></a></li>
+                                <li><a href="#">Fermo <span>›</span></a></li>
+                                <li><a href="#">Macerata <span>›</span></a></li>
+                                <li><a href="#">Ravenna <span>›</span></a></li>
+                                <li><a href="#">Veneto <span>›</span></a></li>
+                                <li><a href="#">Grosseto <span>›</span></a></li>
+                                <li><a href="#">Montecatini <span>›</span></a></li>
+                                <li><a href="#">Prato <span>›</span></a></li>
+                                <li><a href="#">Viareggio <span>›</span></a></li>
+                                <li><a href="#">Cremona <span>›</span></a></li>
+                                <li><a href="#">Mantova <span>›</span></a></li>
+                                <li><a href="#">Varese <span>›</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                                        <!-- MENÙ Dropdown (with articles) -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">MENÙ <span>∨</span></a>
+                        <!-- Full-width Menu -->
+                        <div class="dropdown-menu menu" aria-label="Sottomenu Menu">
+                            <div class="menu-split-layout">
+                                <!-- Left Side: 2 columns of links -->
+                                <ul class="menu-list cols-2">
+                                    <li><a href="#">Cronaca <span>›</span></a></li>
+                                    <li><a href="#">Sport <span>›</span></a></li>
+                                    <li><a href="#">Cosa Fare <span>›</span></a></li>
+                                    <li><a href="#">Politica <span>›</span></a></li>
+                                    <li><a href="#">Economia <span>›</span></a></li>
+                                    <li><a href="#">Elezioni Emilia Romagna <span>›</span></a></li>
+                                    <li><a href="#">Cultura e spettacoli <span>›</span></a></li>
+                                    <li><a href="#">Agrofutura <span>›</span></a></li>
+                                    <li><a href="#">Migliori <span>›</span></a></li>
+                                    <li><a href="#">AgrigentoOggi <span>›</span></a></li>
+                                    <li><a href="#">Casteddu On Line <span>›</span></a></li>
+                                    <li><a href="#">L'Immediato <span>›</span></a></li>
+                                    <li><a href="#">LecceNews24 <span>›</span></a></li>
+                                    <li><a href="#">Senza Colonne News <span>›</span></a></li>
+                                    <li><a href="#">Cavallo Magazine <span>›</span></a></li>
+                                    <li><a href="#">Guida TV <span>›</span></a></li>
+                                    <li><a href="#">Motori <span>›</span></a></li>
+                                    <li><a href="#">Pronto Imprese <span>›</span></a></li>
+                                </ul>
+
+                                <!-- Right Side: Article Cards -->
+                                <div class="menu-articles">
+                                    <a href="#" class="dropdown-article-card">
+                                        <img src="https://placehold.co/300x170/e1e1e1/333333?text=Foto+Notizia+1" alt="Notizia 1">
+                                        <span class="article-label">Ultima ora</span>
+                                        <span class="article-title">Italiana Sitael sosterrà l'innovazione dell'Agenzia spaziale egiziana</span>
+                                    </a>
+                                    <a href="#" class="dropdown-article-card">
+                                        <img src="https://placehold.co/300x170/e1e1e1/333333?text=Foto+Notizia+2" alt="Notizia 2">
+                                        <span class="article-label">Ultima ora</span>
+                                        <span class="article-title">Orsini, 'il decreto primo maggio argine contro il dumping contrattuale'</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- SPECIALI Dropdown (2 columns) -->
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" aria-haspopup="true" aria-expanded="false">SPECIALI <span>∨</span></a>
+                        <!-- Full-width Menu -->
+                        <div class="dropdown-menu menu" aria-label="Sottomenu Speciali">
+                            <ul class="menu-list cols-2">
+                                <li><a href="#">140 Anni - il Resto del Carlino <span>›</span></a></li>
+                                <li><a href="#">Agrofutura <span>›</span></a></li>
+                                <li><a href="#">Qn Mobilità <span>›</span></a></li>
+                                <li><a href="#">Top Aziende <span>›</span></a></li>
+                                <li><a href="#">Sfumature 2024 - Philip Morris Italia <span>›</span></a></li>
+                                <li><a href="#">Opere strategiche Gruppo FS <span>›</span></a></li>
+                                <li><a href="#">Cronisti in Classe <span>›</span></a></li>
+                                <li><a href="#">Podcast <span>›</span></a></li>
+                                <li><a href="#">QN Distretti <span>›</span></a></li>
+                                <li><a href="#">Premio Mascagni <span>›</span></a></li>
+                                <li><a href="#">Top 500 Bologna <span>›</span></a></li>
+                                <li><a href="#">Top 500 Romagna <span>›</span></a></li>
+                                <li><a href="#">Alfasigma <span>›</span></a></li>
+                                <li><a href="#">Teatri in regione <span>›</span></a></li>
+                                <li><a href="#">il Resto di Bologna <span>›</span></a></li>
+                                <li><a href="#">La Sfida della Coesione Europea <span>›</span></a></li>
+                                <li><a href="#">Vivere Riccione <span>›</span></a></li>
+                                <li><a href="#">Macfrut <span>›</span></a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li><a href="#">VIDEO</a></li>
+                    <li><a href="#" class="highlight">ULTIM'ORA <span class="red-dot"></span></a></li>
+                    
+                    <li class="nav-search-item">
+                        <a href="#" class="search-btn">
+                            <span class="icon">🔍</span> Ricerca
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="site-content">
+        <!-- Grid and Flexbox layouts for news articles -->
+        <h1 id="main-title" class="visually-hidden">Il Resto del Carlino (Clone)</h1>
+        
+        <section class="top-news">
+            <h2>Ultime Notizie</h2>
+            <!-- Placeholder for articles -->
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <!-- Footer links -->
+    </footer>
+</body>
+</html>
