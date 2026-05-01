@@ -63,6 +63,230 @@ a.text-dark:hover {
 }
 
 /* ==========================================================================
+   Sticky Header Collapsing Logic & Hover Effects
+   ========================================================================== */
+
+/* The spacer dynamically pushes the <main> content down */
+.header-spacer {
+    height: 240px; 
+}
+@media (max-width: 991px) {
+    .header-spacer {
+        height: 160px;
+    }
+}
+
+/* Set up container transitions for smooth collapsing */
+.site-header .top-row,
+.site-header .logo-row,
+.site-header .trending-topics,
+.site-header nav.navbar {
+    max-height: 200px;
+    opacity: 1;
+    transition: max-height 0.35s ease, opacity 0.3s ease, margin 0.3s ease, padding 0.3s ease;
+}
+
+/* SCROLLED STATE: Collapse the big sections completely */
+/* Notice we added 'nav.navbar' so the Città row disappears too! */
+.site-header.scrolled .top-row,
+.site-header.scrolled .logo-row,
+.site-header.scrolled .trending-topics,
+.site-header.scrolled nav.navbar {
+    max-height: 0 !important;
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    border: none !important;
+}
+
+/* SCROLLED STATE: Show the compact logo & mobile menu toggle */
+.site-header.scrolled .compact-header-items {
+    display: flex !important;
+}
+
+.site-header.scrolled .nav-wrapper {
+    margin-bottom: 0 !important;
+    background-color: #ffffff !important; 
+    border-bottom: 1px solid #e1e1e1;
+}
+
+/* Ensure the "FW-BLACK" exists for the main logo */
+.fw-black {
+    font-weight: 900 !important;
+}
+
+/* Specific styling for the menu items to look like the image */
+.navbar .flex-fill {
+    transition: background-color 0.2s;
+    cursor: pointer;
+}
+
+.navbar .flex-fill:hover {
+    background-color: #f8f9fa;
+}
+
+.navbar .nav-link, .trending-topics .nav-link {
+    color: var(--brand-color) !important;
+}
+
+/* Styling the dropdown arrows to match the screenshot */
+.dropdown-toggle::after {
+    vertical-align: 0.1em;
+    border-top: 0.35em solid;
+    border-right: 0.35em solid transparent;
+    border-left: 0.35em solid transparent;
+    margin-left: 0.5em;
+    color: #999;
+}
+
+/* Adjusting the logo row widgets */
+.logo-row .bg-light {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #f2f6f9 !important; /* Slightly blueish tint like the photo */
+}
+
+/* 1. Base Styling for the Nav Bar */
+.custom-main-nav {
+    background-color: #f8f9fa; /* The light gray background */
+    font-size: 14px;
+}
+
+.custom-main-nav .nav-link {
+    color: #333 !important;
+    border-radius: 0;
+    height: 100%;
+}
+
+/* 2. Equal Width Columns */
+.custom-main-nav .flex-fill {
+    flex: 1 1 0; /* Forces all 6 items to be exactly the same width */
+}
+
+/* 3. The Vertical Dividers */
+.custom-main-nav .border-end {
+    border-right: 1px solid #dee2e6 !important;
+}
+
+/* 4. Active State: Change background to White when dropdown is open */
+/* Bootstrap adds the .show class to the 'li.dropdown' when active */
+.custom-main-nav .nav-item.dropdown.show {
+    background-color: #fff !important;
+}
+
+/* Optional: Make the text blue when active to match the site */
+.custom-main-nav .nav-item.dropdown.show > .nav-link {
+    color: #0056b3 !important;
+}
+
+/* 5. Trending Bar Styling */
+.trending-bar .nav-link {
+    padding: 0;
+    font-size: 13px;
+    transition: text-decoration 0.2s;
+}
+
+.trending-bar .nav-link:hover {
+    text-decoration: underline;
+}
+
+/* 6. Special Search background */
+.bg-search-gray {
+    background-color: #f2f2f2;
+}
+
+.compact-header-items .navbar-toggler,
+.compact-header-items .navbar-toggler * {
+    transition: color 0.2s ease;
+}
+
+.compact-header-items .navbar-toggler:hover,
+.compact-header-items .navbar-toggler:hover span,
+.compact-header-items .navbar-toggler:hover i {
+    color: var(--brand-color) !important;
+    cursor: pointer;
+}
+
+/* Hover for Accedi and Acquista il giornale */
+.compact-header-items a:not(.navbar-brand):hover,
+.compact-header-items a:not(.navbar-brand):hover i {
+    color: var(--brand-color) !important;
+}
+
+/* ==========================================================================
+   Desktop MEGA MENU Hover logic
+   ========================================================================== */
+
+/* Update this existing class */
+.desktop-hover-menu {
+    position: absolute;
+    top: 100%;       
+    left: -15px;     
+    width: 900px;    /* Increased width to accommodate articles! */
+    background-color: var(--bg-white);
+    border-top: 2px solid var(--brand-color); 
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: all 0.2s ease-in-out;
+    z-index: 1050;
+    margin-top: 13px; 
+}
+
+/* Add this new rule for the dropdown articles */
+.article-hover:hover h6 {
+    color: var(--brand-color);
+    text-decoration: underline;
+}
+
+/* Subtle invisible bridge so the menu doesn't disappear when moving mouse down */
+.hover-dropdown-wrapper::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 15px; 
+    bottom: -15px;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Show the dropdown exclusively on large screens when hovering over the wrapper */
+@media (min-width: 992px) {
+    .hover-dropdown-wrapper:hover .desktop-hover-menu {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+}
+
+/* Specific text hover color for dropdown anchors */
+.hover-blue:hover {
+    color: var(--brand-color) !important;
+}
+.hover-blue:hover i {
+    color: var(--brand-color) !important;
+}
+
+/* ==========================================================================
+   Desktop Hover Logic for Main Navbar Dropdowns
+   ========================================================================== */
+@media (min-width: 992px) {
+    /* Reveal the Bootstrap dropdown on hover */
+    .navbar .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+        animation: fadeIn 0.2s ease-in-out;
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ==========================================================================
    News Layout Components
    ========================================================================== */
 
@@ -184,6 +408,7 @@ a.text-dark:hover {
     object-fit: cover;
 }
 
+
 /* Video Carousel Styling */
 .video-card {
     position: relative;
@@ -233,12 +458,17 @@ a.text-dark:hover {
     color: white;
 }
 
-/* Sidebar Styling */
+/* Update your existing sidebar class */
 .sidebar {
     border-left: 1px solid var(--border-color);
     padding-left: 20px;
+    
+    /* ADD THESE TWO LINES: */
+    height: fit-content;   /* Sidebar only takes up the space it needs */
+    align-self: flex-start; /* Prevents the 'stretching' anchor effect */
 }
 
+/* Ensure the layout remains correct on mobile */
 @media (max-width: 991px) {
     .sidebar {
         border-left: none;
@@ -246,6 +476,8 @@ a.text-dark:hover {
         padding-left: 0;
         padding-top: 30px;
         margin-top: 30px;
+        /* Reset for mobile so it flows normally */
+        height: auto; 
     }
 }
 
@@ -274,5 +506,160 @@ a.text-dark:hover {
     .video-slide-item {
         flex: 0 0 calc(50% - 5px);
         min-width: calc(50% - 5px);
+    }
+}
+
+/* Landscape Video Track */
+.video-landscape-track {
+    transition: transform 0.4s ease-in-out;
+    gap: 15px; /* Space between the videos */
+}
+
+/* 60% width forces 1 full video, plus ~40% of the next one to show */
+.video-landscape-item {
+    flex: 0 0 calc(60% - 15px); 
+    min-width: calc(60% - 15px);
+}
+
+/* Force standard landscape aspect ratio */
+.video-landscape-item img {
+    aspect-ratio: 16 / 9;
+}
+
+/* Mobile adjustments: make it take up more space on tiny screens */
+@media (max-width: 768px) {
+    .video-landscape-item {
+        flex: 0 0 calc(85% - 15px); /* 85% width on mobile, showing a smaller 15% peek */
+        min-width: calc(85% - 15px);
+    }
+}
+
+/* Vertical divider only on Desktop */
+@media (min-width: 768px) {
+    .border-md-end {
+        border-right: 1px solid #dee2e6 !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .vertical-divider {
+        border-right: 1px solid #dee2e6;
+    }
+}
+
+.site-footer {
+    background-color: #0d5ec9; /* similar blue */
+}
+
+.footer-logo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: rgba(0,0,0,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.footer-heading {
+    font-size: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 0.05em;
+}
+
+.site-footer a {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+}
+
+.site-footer a:hover,
+.site-footer a:focus {
+    text-decoration: underline;
+    color: #ffffff;
+}
+
+.footer-bottom {
+    background-color: rgba(0,0,0,0.15);
+}
+
+/* Footer Typography Improvements */
+.footer-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.footer-company {
+    font-size: 0.85rem;
+    opacity: 0.9;
+}
+
+/* Section headings */
+.footer-heading {
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    margin-bottom: 12px;
+}
+
+/* Links */
+.footer-links li {
+    margin-bottom: 6px;
+}
+
+.footer-links a {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Bottom metadata */
+.footer-meta {
+    font-size: 0.75rem;
+    opacity: 0.85;
+}
+
+/* Logos row */
+.footer-logos img {
+    height: 18px;
+    opacity: 0.5;
+    filter: grayscale(100%);
+    transition: opacity 0.2s ease;
+}
+
+.footer-logos img:hover {
+    opacity: 0.8;
+}
+
+.logo-text {
+    font-family: var(--font-secondary); /* serif = newspaper feel */
+    font-size: 0.85rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+
+    color: rgba(255,255,255,0.35); /* faded look */
+    font-weight: 600;
+
+    transition: all 0.2s ease;
+}
+
+.logo-main {
+    font-size: 1.8rem;   /* bigger */
+    font-weight: 700;    /* stronger presence */
+}
+
+/* Hover (subtle, like original sites) */
+.logo-text:hover {
+    color: rgba(255,255,255,0.6);
+}
+
+/* ==========================================================================
+   Newspaper Layout - Strict Container Width
+   ========================================================================== */
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1040px !important; 
+        /* You can change this to 1000px or 1200px to fine-tune the exact width you want */
     }
 }
