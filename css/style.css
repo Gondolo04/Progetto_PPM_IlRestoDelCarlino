@@ -4,8 +4,8 @@
 :root {
     --text-main: #333333;
     --text-muted: #666666;
-    --brand-color: #005ac7;    /* Light blue links */
-    --brand-red: #e3000f;      /* Red dot and trending accent */
+    --brand-color: #005ac7;   
+    --brand-red: #e3000f;     
     --bg-white: #ffffff;
     --bg-light: #f4f4f4;
     --border-color: #e1e1e1;
@@ -140,12 +140,12 @@ a.text-dark:hover {
     height: 100%;
     display: flex;
     align-items: center;
-    background-color: #f2f6f9 !important; /* Slightly blueish tint like the photo */
+    background-color: #f2f6f9 !important; 
 }
 
 /* 1. Base Styling for the Nav Bar */
 .custom-main-nav {
-    background-color: #f8f9fa; /* The light gray background */
+    background-color: #f8f9fa; 
     font-size: 14px;
 }
 
@@ -157,16 +157,13 @@ a.text-dark:hover {
 
 /* 2. Equal Width Columns */
 .custom-main-nav .flex-fill {
-    flex: 1 1 0; /* Forces all 6 items to be exactly the same width */
+    flex: 1 1 0;
 }
 
-/* 3. The Vertical Dividers */
 .custom-main-nav .border-end {
     border-right: 1px solid #dee2e6 !important;
 }
 
-/* 4. Active State: Change background to White when dropdown is open */
-/* Bootstrap adds the .show class to the 'li.dropdown' when active */
 .custom-main-nav .nav-item.dropdown.show {
     background-color: #fff !important;
 }
@@ -176,7 +173,7 @@ a.text-dark:hover {
     color: #0056b3 !important;
 }
 
-/* 5. Trending Bar Styling */
+/* 5. Trending topics Styling */
 .trending-topics .nav-link {
     padding: 0;
     font-size: 13px;
@@ -187,7 +184,7 @@ a.text-dark:hover {
     text-decoration: underline;
 }
 
-/* 6. Special Search background */
+
 .bg-search-gray {
     background-color: #f2f2f2;
 }
@@ -210,11 +207,8 @@ a.text-dark:hover {
     color: var(--brand-color) !important;
 }
 
-/* ==========================================================================
-   Desktop MEGA MENU Hover logic
-   ========================================================================== */
 
-/* Update this existing class */
+
 .desktop-hover-menu {
     position: absolute;
     top: 100%;       
@@ -230,7 +224,6 @@ a.text-dark:hover {
     margin-top: 13px; 
 }
 
-/* Add this new rule for the dropdown articles */
 .article-hover:hover h6 {
     color: var(--brand-color);
     text-decoration: underline;
@@ -281,11 +274,6 @@ a.text-dark:hover {
     to { opacity: 1; transform: translateY(0); }
 }
 
-/* ==========================================================================
-   News Layout Components
-   ========================================================================== */
-
-/* Brand Color Helpers */
 .text-brand-primary {
     color: var(--brand-color) !important;
 }
@@ -306,7 +294,7 @@ a.text-dark:hover {
 /* Typography Tweaks */
 .headline {
     font-family: var(--font-primary);
-    letter-spacing: -0.02em; /* Gives that tight newspaper headline feel */
+    letter-spacing: -0.02em; 
     line-height: 1.15;
 }
 
@@ -320,8 +308,6 @@ a.text-dark:hover {
 }
 
 .article-excerpt {
-    /* Often newspaper excerpts use a serif font or a lighter sans-serif. 
-       We are using the secondary font variable you provided. */
     font-family: var(--font-secondary); 
     font-size: 0.95rem;
     line-height: 1.4;
@@ -340,7 +326,7 @@ a.text-dark:hover {
 
 /* Slider Section Styling */
 .bg-section-alt {
-    background-color: #e9f2fb; /* A light blue to match the image_f09c9f.png screenshot */
+    background-color: #e9f2fb; 
     padding: 40px 0;
 }
 
@@ -381,14 +367,11 @@ a.text-dark:hover {
     height: 100%;
 }
 
-/* Optional: Add a subtle border or hover background to the small articles 
-   to make the "filling" of space more intentional */
 .article-link {
     padding: 5px 0;
     transition: background-color 0.2s ease;
 }
 
-/* Ensure the small images don't get squashed as they fill the space */
 .small-article-img {
     aspect-ratio: 1 / 1;
     width: 80px;
@@ -446,14 +429,11 @@ a.text-dark:hover {
     color: white;
 }
 
-/* Update your existing sidebar class */
 .sidebar {
     border-left: 1px solid var(--border-color);
     padding-left: 20px;
-    
-    /* ADD THESE TWO LINES: */
-    height: fit-content;   /* Sidebar only takes up the space it needs */
-    align-self: flex-start; /* Prevents the 'stretching' anchor effect */
+    height: fit-content;   
+    align-self: flex-start; 
 }
 
 /* Ensure the layout remains correct on mobile */
@@ -471,16 +451,16 @@ a.text-dark:hover {
 
 /* Slider Container */
 .video-slider-viewport {
-    overflow: hidden; /* This hides the videos that are "off-screen" */
+    overflow: hidden; 
     position: relative;
     padding: 10px;
 }
 
 .video-slider-track {
     display: flex;
-    flex-wrap: nowrap; /* Prevent wrapping shown in your image */
-    transition: transform 0.4s ease-in-out; /* Smooth slide effect */
-    gap: 10px; /* Space between videos */
+    flex-wrap: nowrap; 
+    transition: transform 0.4s ease-in-out; 
+    gap: 10px; 
 }
 
 /* Force each slide to take up exactly 1/4th of the container width minus gaps */
@@ -500,7 +480,7 @@ a.text-dark:hover {
 /* Landscape Video Track */
 .video-landscape-track {
     transition: transform 0.4s ease-in-out;
-    gap: 15px; /* Space between the videos */
+    gap: 15px; 
 }
 
 /* 60% width forces 1 full video, plus ~40% of the next one to show */
@@ -537,7 +517,7 @@ a.text-dark:hover {
 }
 
 .site-footer {
-    background-color: #0b4fa3 ; /* similar blue */
+    background-color: #0b4fa3 ; 
 }
 
 .footer-logo {
@@ -622,7 +602,7 @@ a.text-dark:hover {
 }
 
 .logo-text {
-    font-family: var(--font-secondary); /* serif = newspaper feel */
+    font-family: var(--font-secondary); 
     font-size: 1.3rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
@@ -633,8 +613,8 @@ a.text-dark:hover {
 }
 
 .logo-main {
-    font-size: 1.8rem;   /* bigger */
-    font-weight: 700;    /* stronger presence */
+    font-size: 1.8rem;   
+    font-weight: 700;    
 }
 
 .logo-widget-center {
@@ -660,7 +640,6 @@ a.text-dark:hover {
     }
 }
 
-/* Hover (subtle, like original sites) */
 .logo-text:hover {
     color: rgba(247, 71, 71, 0.6);
 }
@@ -671,7 +650,6 @@ a.text-dark:hover {
 @media (min-width: 1200px) {
     .container {
         max-width: 1040px !important; 
-        /* You can change this to 1000px or 1200px to fine-tune the exact width you want */
     }
 }
 
@@ -715,7 +693,7 @@ a.text-dark:hover {
     right: -2px;
     width: 10px;
     height: 10px;
-    background-color: #d62d20; /* Your brand red */
+    background-color: #d62d20;
     border-radius: 50%;
     border: 2px solid #f8f9fa;
 }
@@ -736,7 +714,7 @@ a.text-dark:hover {
 }
 
 .notif-badge:hover .badge-text {
-    max-width: 200px; /* Adjust based on your text length */
+    max-width: 200px; 
     opacity: 1;
     margin-left: 12px;
 }

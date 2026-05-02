@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lorem ipsum</title>
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
@@ -13,7 +12,6 @@
     <header id="mainHeader" class="site-header fixed-top bg-white border-bottom shadow-sm">
     <div class="container px-0">
         
-        <!-- LEVEL 1: TOP BAR (Quotidiano Nazionale & Icons) -->
         <div class="top-row d-flex justify-content-between align-items-center py-1 border-bottom px-3" style="font-size: 0.85rem;">
             <div class="fw-bold text-muted text-uppercase" style="letter-spacing: 1px;">Lorem ipsum</div>
             <div class="d-flex align-items-center gap-3">
@@ -32,7 +30,6 @@
             </div>
         </div>
 
-        <!-- LEVEL 2: BRANDING ROW (The "Resto del Carlino" part) -->
         <div class="logo-row row align-items-center flex-nowrap g-0 border-bottom">
             <!-- Left Widget -->
             <div class="col-lg-auto d-none d-lg-flex bg-light p-3 border-end logo-widget-side">
@@ -67,11 +64,9 @@
                 <!-- Navigation Wrapper -->
         <div class="nav-wrapper bg-white position-relative">
     
-            <!-- ADDED: Compact Logo & Menu Bar (Hidden by default, shown on scroll) -->
-            <!-- We use 'container' here so it matches the width of your page content exactly! -->
             <div class="compact-header-items container d-none align-items-center justify-content-between p-0 py-2 w-100">
                 
-                <!-- Left: Menu & Search -->
+                <!-- Left -->
                 <div class="d-flex align-items-center gap-3">
                     
                     <!-- WRAPPER FOR HOVER DROPDOWN -->
@@ -116,7 +111,6 @@
                                             </div>
 
                                             <!-- ARTICLES SECTION (Right side with vertical border) -->
-                                            <!-- The 'border-start' and 'ps-4' classes create the vertical line and spacing -->
                                             <div class="col-5 border-start ps-4">
                                                 <div class="row">
                                                     <!-- Article 1 -->
@@ -152,12 +146,12 @@
                     </a>
                 </div>
 
-                <!-- Center: Exact Match Logo -->
+                <!-- Center -->
                 <a class="navbar-brand text-brand-primary fw-black m-0 p-0 text-decoration-none" href="#" style="font-size: 32px; letter-spacing: -1.5px; font-family: Arial, sans-serif;">
                     il Resto del Carlino
                 </a>
 
-                <!-- Right: Acquista, Bell, Accedi -->
+                <!-- Right -->
                 <div class="d-flex align-items-center gap-3">
                     <a href="#" class="text-dark fw-bold text-decoration-none d-none d-lg-inline" style="font-size: 14px;">Lorem ipsum</a>
                     
@@ -196,14 +190,12 @@
             <!-- Main Navigation Bar -->
             <nav class="navbar navbar-expand-md p-0 custom-main-nav border-bottom" aria-label="Main Navigation">
                 <div class="container px-0">
-                    <!-- We use w-100 and d-flex to ensure the list fills the whole container -->
                     <ul class="navbar-nav w-100 d-flex flex-row text-center fw-bold text-uppercase">
                         
                         <li class="nav-item dropdown position-static flex-fill border-end">
                             <a class="nav-link dropdown-toggle" href="#" id="cittaDropdown" data-bs-toggle="dropdown">
                                 Lorem 
-                            </a>
-                                <!-- Full-width "Mega" Dropdown -->
+                            </a>+
                                 <div class="dropdown-menu w-100 start-0 mt-0 border-0 shadow-sm p-4" aria-labelledby="cittaDropdown">
                                     
                                     <!-- Search Bar inside dropdown -->
@@ -356,7 +348,6 @@
                                     Lorem ipsum <span class="bg-danger rounded-circle d-inline-block" style="width: 8px; height: 8px;"></span>
                                 </a>
 
-                                <!-- Mega Menu Content -->
                                 <div class="dropdown-menu w-100 start-0 mt-0 border-0 shadow-sm p-4" aria-labelledby="ultimoraDropdown">
                                     <div class="container">
                                         <div class="row">
@@ -407,13 +398,10 @@
 
 
     <div style="height: 240px;"></div>
-    <!-- ==========================================
-     I PIÙ LETTI SECTION
-     ========================================== -->
+
 <section class="container mt-4">
     <!-- Section Title -->
     <div class="d-flex align-items-center mb-3" style="color: var(--brand-red, #e3000f);">
-        <!-- Assuming you use Bootstrap Icons (bi-graph-up-arrow) -->
         <i class="bi bi-graph-up-arrow fs-5 me-2"></i> 
         <h2 class="h5 fw-bold mb-0 text-uppercase" style="letter-spacing: -0.5px;">venenatis magna</h2>
     </div>
@@ -494,11 +482,10 @@
 <div style="height: 140px;"></div>
 
 
-<!-- Add another spacer here before your main columns start -->
 <div style="height: 40px;"></div>
 
 <main class="container my-4">
-    <!-- TOP BAR: Breaking News (Ultim'ora) -->
+    <!-- TOP BAR: Breaking News -->
     <div class="d-flex justify-content-between align-items-center border-top border-bottom py-2 mb-4">
         <div class="d-flex align-items-center text-truncate pe-3">
             <span class="pulse-dot me-2"></span>
@@ -529,7 +516,6 @@
         <!-- Column 1 -->
         <div class="col-lg-4 mb-4 border-end-lg pe-lg-4">
             <a href="#" class="article-link text-decoration-none text-dark">
-                <!-- Placeholder mimicking the split image -->
                 <img src="https://placehold.co/400x250/e1e1e1/666666?text=accumsan+ipsum" class="img-fluid w-100 mb-3 object-fit-cover" alt="accumsan ipsum">
                 <span class="category-label text-brand-primary text-uppercase fw-bold mb-2 d-block">Cras iaculis</span>
                 <h2 class="headline fw-bold mb-2 h4">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris</h2>
@@ -541,7 +527,6 @@
         <!-- Column 2 -->
         <div class="col-lg-4 mb-4 border-end-lg pe-lg-4 ps-lg-4">
             <a href="#" class="article-link text-decoration-none text-dark">
-                <!-- Placeholder mimicking image with inset -->
                 <img src="https://placehold.co/400x250/e1e1e1/666666?text=Cras+iaculis" class="img-fluid w-100 mb-3 object-fit-cover" alt="Cras iaculis">
                 <span class="category-label text-brand-primary text-uppercase fw-bold mb-2 d-block">Cras iaculis</span>
                 <h2 class="headline fw-bold mb-2 h4">Sunt in culpa qui officia deserunt mollit anim id est laborum</h2>
@@ -560,7 +545,6 @@
                 <p class="author text-uppercase small fw-bold">Morbi ac purus posuere</p>
             </a>
             
-            <!-- Subtle Divider -->
             <hr class="text-muted opacity-25 my-3">
             
             <!-- Article 3B -->
@@ -575,14 +559,13 @@
 
     <hr class="text-muted opacity-25 my-3">
 
-    <!-- HORIZONTAL ARTICLE SECTION (Cultura e Spettacoli) -->
+    <!-- HORIZONTAL ARTICLE SECTION -->
     <div class="row border-bottom pb-4 mb-4 align-items-center mt-5">
         
         <!-- Text Content Column -->
         <div class="col-lg-7 mb-4 mb-lg-0 pe-lg-4 order-2 order-lg-1">
             <a href="#" class="article-link text-decoration-none text-dark">
                 <span class="category-label text-brand-primary text-uppercase fw-bold mb-2 d-block">Cras iaculis</span>
-                <!-- Using a slightly smaller heading display class than the main hero -->
                 <h2 class="headline fw-bolder mb-3 h2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</h2>
                 <p class="article-excerpt text-muted mb-3">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
                 <p class="author text-uppercase small fw-bold mb-0">Morbi ac purus posuere</p>
@@ -592,7 +575,6 @@
         <!-- Image Content Column -->
         <div class="col-lg-5 order-1 order-lg-2 mb-3 mb-lg-0">
             <a href="#">
-                <!-- Added Bootstrap's 'rounded' class for the soft corners seen in your screenshot -->
                 <img src="https://placehold.co/600x350/000000/ffffff?text=rutrum+arcu" class="img-fluid w-100 rounded object-fit-cover shadow-sm" alt="rutrum arcu">
             </a>
         </div>
@@ -600,9 +582,9 @@
 
     <section class="bg-section-alt mt-5">
     <div class="container">
-        <!-- HEADER (Now only contains the Title) -->
+        <!-- HEADER -->
         <div class="mb-4">
-            <h2 class="text-brand-primary fw-bold">Dalle città</h2>
+            <h2 class="text-brand-primary fw-bold">Lorem ipsum</h2>
         </div>
 
         <div class="row">
@@ -623,7 +605,6 @@
                 <div id="rightColumnCarousel" class="carousel slide h-100 d-flex flex-column" data-bs-interval="false">
                     
                     <!-- THE CONTROLS (Desktop: Top, Mobile: Bottom) -->
-                    <!-- 'order-lg-0' puts it first on desktop, 'order-1' puts it last on mobile -->
                     <div class="slider-controls mb-3 mb-lg-4 order-1 order-lg-0 d-flex justify-content-center justify-content-lg-end mt-3 mt-lg-0">
                         <button class="btn btn-outline-primary me-2 rounded-circle" type="button" data-bs-target="#rightColumnCarousel" data-bs-slide="prev" aria-label="Previous carousel item">
                             <span>&lt;</span>
@@ -722,7 +703,6 @@
                             </div>
                         </div>
 
-                        <!-- SLIDE 2 would follow the same structure -->
 
                     </div>
                 </div>
@@ -732,7 +712,6 @@
 </section>
 
 <div class="container mt-4">
-    <!-- Ensure the row uses align-items-stretch (default) -->
     <div class="row g-4 d-flex">
         
         <!-- LEFT MAIN COLUMN (8 units wide) -->
@@ -742,7 +721,6 @@
             <div class="d-flex justify-content-between align-items-center mb-3">
                 <h2 class="fw-bold h4 mb-0">Duis rhoncus</h2>
                 <div class="slider-controls">
-                    <!-- We've added IDs and onclick functions for the sliding logic -->
                     <button class="btn btn-outline-primary rounded-circle me-2" onclick="slideVideos(-1)" style="width: 40px; height: 40px;" aria-label="Previous video">&lt;</button>
                     <button class="btn btn-outline-primary rounded-circle" onclick="slideVideos(1)" style="width: 40px; height: 40px;" aria-label="Next video">&gt;</button>
                 </div>
@@ -823,7 +801,7 @@
                 </div>
             </div>
 
-            <!-- ARTICLES FEED (Keep expanding here) -->
+            <!-- ARTICLES FEED -->
             <div class="article-feed">
                 <!-- Article A -->
                 <div class="row mb-4 pb-4 border-bottom">
@@ -850,8 +828,6 @@
                     </div>
                 </div>
             </div>
-
-            <!-- === START OF REPEATING PATTERN === -->
 
             <!-- BIG ARTICLE (E.g., Weather) -->
             <!-- Standard div without 'row' since the image is full width -->
@@ -1038,9 +1014,7 @@
                 </div>
             </div>
 
-            <!-- === END OF REPEATING PATTERN === -->
-            <!-- You can copy-paste the "BIG ARTICLE" and "SMALL ARTICLE" blocks above over and over to make the page as long as you want. -->
-
+            
             <!-- BOXED SECTION -->
             <div class="border rounded-1 p-2 mb-5 bg-white shadow-sm">
                 <h3 class="text-brand-primary fw-bold mb-4">Lorem ipsum dolor sit amet</h3>
@@ -1075,7 +1049,7 @@
                     </div>
                 </div>
 
-                <!-- Article 2: Breaking news style -->
+                <!-- Article 3: Breaking news style -->
                 <div class="row">
                     <div class="col-md-5">
                         <div class="position-relative">
@@ -1093,7 +1067,7 @@
                     </div>
                 </div>
 
-                <!-- Article 1: Large image split -->
+                <!-- Article 4: Large image split -->
                 <div class="row mb-4 pb-4 border-bottom">
                     <div class="col-md-5">
                         <img src="https://placehold.co/600x400/333/fff?text=bibendum " class="img-fluid rounded-1" alt="bibendum ">
@@ -1105,7 +1079,7 @@
                     </div>
                 </div>
 
-                <!-- Article 1: Large image split -->
+                <!-- Article 5: Large image split -->
                 <div class="row mb-4 pb-4 border-bottom">
                     <div class="col-md-5">
                         <img src="https://placehold.co/600x400/333/fff?text=conubia" class="img-fluid rounded-1" alt="conubia">
@@ -1799,7 +1773,7 @@
             <div class="oroscopo-section p-4 px-lg-5 mb-4 rounded-1 position-relative" style="background-color: #f4f6f8;">
                 <h3 class="fw-bold h5 mb-4 text-brand-primary text-uppercase">Oroscopo</h3>
 
-                <!-- LEFT ARROW: Now outside the overflow-hidden viewport -->
+                <!-- LEFT ARROW -->
                 <button class="btn position-absolute top-50 start-0 translate-middle-y z-3 p-0 border-0 ms-2" 
                     onclick="slideHoroscope(-1)" 
                     aria-label="Previous horoscope" 
@@ -1809,7 +1783,7 @@
                     </svg>
                 </button>
 
-                <!-- RIGHT ARROW: Now outside the overflow-hidden viewport -->
+                <!-- RIGHT ARROW -->
                 <button class="btn position-absolute top-50 end-0 translate-middle-y z-3 p-0 border-0 me-2" 
                     onclick="slideHoroscope(1)" 
                     aria-label="Next horoscope" 
@@ -1885,7 +1859,6 @@
             <!-- LUCE! BOXED SECTION -->
             <div class="border rounded-1 px-4 pb-4 mb-5 position-relative bg-white shadow-sm" style="padding-top: 50px;">
                 
-                <!-- 1. ADJUSTED LABEL: Bigger, top-right, no overlap -->
                 <div class="position-absolute top-0 start-0 mt-3 ms-4 fw-black text-uppercase" style="font-size: 1.2rem; letter-spacing: 2px; color: #444; font-family: sans-serif;">
                     LOREM!
                 </div>
@@ -1914,7 +1887,6 @@
                     </div>
                 </div>
 
-                <!-- 2. FLOATING BOTTOM LINE: Not connected to edges or vertical divider -->
                 <div class="d-flex justify-content-center mt-4">
                     <div style="width: 90%; height: 1px; background-color: #dee2e6;"></div>
                 </div>
@@ -1964,12 +1936,11 @@
                 </div>
             </div>
 
-            <!-- OROSCOPO SLIDER SECTION -->
-            <!-- Added 'px-4' or 'px-5' to the main container to create more "gutter" space for the arrows -->
+            
             <div class="oroscopo-section p-4 px-lg-5 mb-4 rounded-1 position-relative" style="background-color: #f4f6f8;">
                 <h3 class="fw-bold h5 mb-4 text-brand-primary text-uppercase">Lorem</h3>
 
-                <!-- LEFT ARROW: Now outside the overflow-hidden viewport -->
+                <!-- LEFT ARROW -->
                 <button class="btn position-absolute top-50 start-0 translate-middle-y z-3 p-0 border-0 ms-2" 
                     onclick="slideHoroscope(-1)" 
                     aria-label="Previous horoscope" 
@@ -1979,7 +1950,7 @@
                     </svg>
                 </button>
 
-                <!-- RIGHT ARROW: Now outside the overflow-hidden viewport -->
+                <!-- RIGHT ARROW -->
                 <button class="btn position-absolute top-50 end-0 translate-middle-y z-3 p-0 border-0 me-2" 
                     onclick="slideHoroscope(1)" 
                     aria-label="Next horoscope" 
@@ -2027,7 +1998,7 @@
             <div class="podcast-section p-4 mb-4 rounded-1 position-relative" style="background-color: #eff5ff;">
                 <h3 class="fw-bold h5 mb-4 text-primary text-uppercase">Lorem Ipsum</h3>
 
-                <!-- Viewport: Now has horizontal margins to make room for the arrows outside of it -->
+                <!-- Viewport -->
                 <div class="podcast-viewport overflow-hidden position-relative mx-4">
                     
                     <div class="podcast-track d-flex" id="podcastTrack" style="transition: transform 0.4s ease-in-out; gap: 20px; align-items: stretch;">
@@ -2098,7 +2069,7 @@
                     </div>
                 </div>
 
-                <!-- ARROWS (Moved OUTSIDE the viewport div) -->
+                <!-- ARROWS -->
                 <button class="btn position-absolute top-50 start-0 translate-middle-y z-3 p-0 border-0 ms-2" 
                         onclick="slidePodcasts(-1)" style="background: none;">
                     <span class="text-primary fs-2 fw-bold">&#10094;</span>
@@ -2109,7 +2080,7 @@
                 </button>
             </div>
 
-            <!-- COMBINED SECTION WRAPPER: This provides the single outer border and shadow -->
+            <!-- COMBINED SECTION WRAPPER-->
             <div class="border rounded-1 shadow-sm mb-5 overflow-hidden">
 
                 <!-- 1. BLUE TOP PART (QN Itinerari) -->
@@ -2210,7 +2181,7 @@
                 </div>
                 
                 <h4 class="fw-bold mt-4 border-bottom border-primary border-3 pb-2" style="width: fit-content;">Lorem</h4>
-                <!-- "PIÙ LETTI" Article Feed -->
+                
                 <div class="piu-letti-feed mt-3">
                     
                     <div class="mb-4 pb-3 border-bottom">
@@ -2251,7 +2222,7 @@
 
                 </div>
 
-                <!-- TOP AD PLACEHOLDER (Newsletter) -->
+                
                 <div class="mt-5 mb-4 text-center">
                     <a href="#">
                         <img src="https://placehold.co/300x250/19398a/ffffff?text=Ad+2" class="img-fluid w-85 shadow-sm" alt="Ad2">
@@ -2259,7 +2230,7 @@
                 </div>
 
                 <h4 class="fw-bold mt-4 border-bottom border-primary border-3 pb-2" style="width: fit-content;">Lorem Ipsum</h4>
-                <!-- "PIÙ LETTI" Article Feed -->
+              
                 <div class="piu-letti-feed mt-3">
                     
                     <div class="mb-4 pb-3 border-bottom">
@@ -2313,7 +2284,7 @@
                         <!-- Poll Options (text-start aligns the text to the left) -->
                         <button type="button" class="btn btn-primary w-100 fw-bold text-start mb-2 rounded-1">Lo</button>
                         
-                        <!-- Using your existing brand-red variable for the No button -->
+                        
                         <button type="button" class="btn w-100 fw-bold text-start mb-2 rounded-1 text-white" style="background-color: var(--brand-red);">rem</button>
                         
                         <button type="button" class="btn w-100 fw-bold text-start mb-4 rounded-1 text-muted" style="border: 1px solid #ccc; background-color: #fff;">ipsum</button>
@@ -2342,7 +2313,7 @@
                     </div>
                 </div>
 
-                <!-- BOTTOM AD PLACEHOLDER (Coesione) -->
+               
                 <div class="mt-4 mb-5 text-center">
                     <a href="#">
                         <img src="https://placehold.co/300x250/19398a/ffffff?text=Ad+4" class="img-fluid w-85 shadow-sm" alt="Ad4">
@@ -2350,7 +2321,7 @@
                 </div>
 
                 <h4 class="fw-bold mt-4 border-bottom border-primary border-3 pb-2" style="width: fit-content;">Lorem</h4>
-                <!-- "PIÙ LETTI" Article Feed -->
+               
                 <div class="piu-letti-feed mt-3">
                     
                     <div class="mb-4 pb-3 border-bottom">
@@ -2418,22 +2389,22 @@
                             </div>
                         </div>
 
-                        <!-- Repeat for other items... -->
+                        
                     </div>
                     
-                    <!-- Sidebar Ad Placeholder below -->
+                  
                     <div class="mt-4">
                         <img src="https://placehold.co/300x200/e00/fff?text=QN+Store+-10%" class="img-fluid w-85 rounded-1" alt="Ad">
                     </div>
                 </section>
 
                 <h4 class="fw-bold mt-4 border-bottom border-primary border-3 pb-2" style="width: fit-content;">Lorem</h4>
-                <!-- "PIÙ LETTI" Article Feed -->
+                
                 <div class="piu-letti-feed mt-3">
                 </div>
 
                 <h4 class="fw-bold mt-4 border-bottom border-primary border-3 pb-2" style="width: fit-content;">Lorem</h4>
-                <!-- "PIÙ LETTI" Article Feed -->
+                
                 <div class="piu-letti-feed mt-3">
                     
                     <div class="mb-4 pb-3 border-bottom">
@@ -2502,7 +2473,7 @@
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                 </p>
 
-                <!-- FADED LOGOS ROW -->
+               
                 <div class="footer-logos d-flex flex-wrap align-items-center gap-4">
                     <span class="logo-text">Lorem</span>
                     <span class="logo-text">Ipsum</span>
@@ -2586,10 +2557,10 @@
         </a>
     </div>
 
-    <!-- Bootstrap Bundle with Popper (JS) -->
+   
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Put this right before your closing </body> tag -->
+    
 <script>
 
     function updateHeaderOnScroll() {
@@ -2626,12 +2597,11 @@
 
         currentIndex += direction;
 
-        // THE LOOPING LOGIC:
-        // If we go past the start, jump to the end. 
+        
         if (currentIndex < 0) {
             currentIndex = maxIndex;
         } 
-        // If we go past the end, jump back to the start.
+
         else if (currentIndex > maxIndex) {
             currentIndex = 0;
         }
@@ -2683,7 +2653,7 @@
 
         horoscopeIndex += direction;
 
-        // Infinite Loop logic
+       
         if (horoscopeIndex < 0) {
             horoscopeIndex = maxIndex;
         } else if (horoscopeIndex > maxIndex) {
