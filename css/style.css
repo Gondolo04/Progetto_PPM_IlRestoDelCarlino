@@ -91,13 +91,8 @@ a.text-dark:hover {
 .site-header.scrolled .top-row,
 .site-header.scrolled .logo-row,
 .site-header.scrolled .trending-topics,
-.site-header.scrolled nav.navbar {
-    max-height: 0 !important;
-    opacity: 0 !important;
-    margin: 0 !important;
-    padding-top: 0 !important;
-    padding-bottom: 0 !important;
-    border: none !important;
+.site-header.scrolled nav.navbar{
+    display: none !important
 }
 
 /* SCROLLED STATE: Show the compact logo & mobile menu toggle */
@@ -182,13 +177,13 @@ a.text-dark:hover {
 }
 
 /* 5. Trending Bar Styling */
-.trending-bar .nav-link {
+.trending-topics .nav-link {
     padding: 0;
     font-size: 13px;
     transition: text-decoration 0.2s;
 }
 
-.trending-bar .nav-link:hover {
+.trending-topics .nav-link:hover {
     text-decoration: underline;
 }
 
@@ -374,13 +369,6 @@ a.text-dark:hover {
     margin-bottom: 0;
 }
 
-/* Vertical divider on large screens only */
-@media (min-width: 992px) {
-    .border-end-lg {
-        border-right: 1px solid rgba(0,0,0,0.1);
-        padding-right: 2rem;
-    }
-}
 
 /* Ensure the carousel has a smooth transition */
 .carousel-item {
@@ -526,6 +514,7 @@ a.text-dark:hover {
     aspect-ratio: 16 / 9;
 }
 
+
 /* Mobile adjustments: make it take up more space on tiny screens */
 @media (max-width: 768px) {
     .video-landscape-item {
@@ -548,7 +537,7 @@ a.text-dark:hover {
 }
 
 .site-footer {
-    background-color: #0d5ec9; /* similar blue */
+    background-color: #0b4fa3 ; /* similar blue */
 }
 
 .footer-logo {
@@ -634,12 +623,11 @@ a.text-dark:hover {
 
 .logo-text {
     font-family: var(--font-secondary); /* serif = newspaper feel */
-    font-size: 0.85rem;
+    font-size: 1.3rem;
     letter-spacing: 0.08em;
     text-transform: uppercase;
 
-    color: rgba(255,255,255,0.35); /* faded look */
-    font-weight: 600;
+    color: rgb(255, 255, 255);
 
     transition: all 0.2s ease;
 }
@@ -649,9 +637,32 @@ a.text-dark:hover {
     font-weight: 700;    /* stronger presence */
 }
 
+.logo-widget-center {
+    min-width: 0;
+    flex: 1 1 auto;
+}
+
+.logo-main-title {
+    font-size: clamp(2.2rem, 4.8vw, 4.5rem);
+    line-height: 1;
+    white-space: nowrap;
+}
+
+.logo-widget-side {
+    flex: 0 0 auto;
+    max-width: none;
+    width: fit-content;
+}
+
+@media (max-width: 1199.98px) {
+    .logo-widget-side {
+        width: fit-content;
+    }
+}
+
 /* Hover (subtle, like original sites) */
 .logo-text:hover {
-    color: rgba(255,255,255,0.6);
+    color: rgba(247, 71, 71, 0.6);
 }
 
 /* ==========================================================================
@@ -661,5 +672,13 @@ a.text-dark:hover {
     .container {
         max-width: 1040px !important; 
         /* You can change this to 1000px or 1200px to fine-tune the exact width you want */
+    }
+}
+
+/* Vertical divider on large screens only */
+@media (min-width: 992px) {
+    .border-end-lg {
+        border-right: 1px solid rgba(0,0,0,0.1);
+        padding-right: 2rem;
     }
 }
