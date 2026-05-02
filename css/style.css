@@ -682,3 +682,61 @@ a.text-dark:hover {
         padding-right: 2rem;
     }
 }
+
+.floating-notif-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    z-index: 9999;
+}
+
+.notif-badge {
+    display: flex;
+    align-items: center;
+    background: #fff2f2;
+    text-decoration: none;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.red-dot {
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    width: 10px;
+    height: 10px;
+    background-color: #d62d20; /* Your brand red */
+    border-radius: 50%;
+    border: 2px solid #f8f9fa;
+}
+
+.badge-text {
+    max-width: 0;
+    opacity: 0;
+    margin-left: 0;
+    font-weight: 700;
+    color: #333;
+    transition: all 0.4s ease;
+    font-size: 0.9rem;
+}
+
+/* Hover logic (Desktop) and Tap logic (Mobile/Tablet) */
+.notif-badge:hover {
+    padding-right: 20px;
+}
+
+.notif-badge:hover .badge-text {
+    max-width: 200px; /* Adjust based on your text length */
+    opacity: 1;
+    margin-left: 12px;
+}
