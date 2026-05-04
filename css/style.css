@@ -623,7 +623,7 @@ a.text-dark:hover {
 }
 
 .logo-main-title {
-    font-size: clamp(2.2rem, 4.8vw, 4.5rem);
+    font-size: clamp(2.2rem, 4.8vw, 4.2rem);
     line-height: 1;
     white-space: nowrap;
 }
@@ -673,7 +673,6 @@ a.text-dark:hover {
     align-items: center;
     background: #fff2f2;
     text-decoration: none;
-    padding: 12px;
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.15);
     transition: all 0.3s ease;
@@ -700,10 +699,9 @@ a.text-dark:hover {
 
 .badge-text {
     max-width: 0;
-    opacity: 0;
-    margin-left: 0;
+    margin-left: 20px;
     font-weight: 700;
-    color: #333;
+    color: #333333 !important;
     transition: all 0.4s ease;
     font-size: 0.9rem;
 }
